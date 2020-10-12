@@ -1,6 +1,19 @@
 .BusinessList {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 4.4rem 10%;
-  }
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 15.2rem 10% 20.4rem 10%;
+  padding-top: 5rem;
+}
+
+.BusinessList:hover .Business{
+  filter: blur(5px);
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+
+.BusinessList .Business:hover{
+  filter: blur(0px);
+  transform: scale(1.1);
+  opacity: 1;
+}

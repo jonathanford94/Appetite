@@ -25,9 +25,19 @@ class App extends React.Component{
   render() {
     return (
       <div className="App">
-          <h1>ravenous</h1>
+        <div className="homePage">
+          <img className="headerImg" src={require('../../Images/backdrop1.svg')}></img>
+          <header>
+            <a className="headerTitle" href="http://localhost:3000/">
+              <span className="logoWrapper fadeUp">
+                <img className="logo" src={require('../../Images/fastfood.svg')}></img>
+                <h1>Appetite</h1>
+              </span>
+            </a>
+          </header>
           <SearchBar searchYelp={this.searchYelp} />
-          <BusinessList businesses={this.state.businesses}/> 
+        </div>  
+        <BusinessList businesses={this.state.businesses}/> 
       </div>
     )
   }

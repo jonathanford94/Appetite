@@ -1,5 +1,6 @@
 import React from 'react';
 import './SearchBar.css';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 class SearchBar extends React.Component{
     constructor(props){
@@ -7,7 +8,9 @@ class SearchBar extends React.Component{
         this.state = {
             term: '',
             location: '',
-            sortBy: 'best_match', 
+            sortBy: 'best_match',
+            arrow: 'hidden',
+            searchError: '',
         };
         this.sortByOptions = {
             'Best Match': 'best_match',
@@ -47,8 +50,15 @@ class SearchBar extends React.Component{
 
     // method to use the searchYelp method passed down from app
     handleSearch(event) {
-        this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy);
-        event.preventDefault()
+        if(this.state.term && this.state.location){
+            this.props.searchYelp(this.state.term, this.state.location, this.state.sortBy);
+            event.preventDefault();
+            this.setState({ arrow: "visible"});
+            this.setState({ searchError: ''});
+        }else{
+            this.setState({ searchError: 'Please ensure you fill the What food? and Where? fields before clicking the Let\'s Go button'});
+        }
+        
     }
 
     // renders the sort by options from the sort by options object in the constructor
@@ -62,17 +72,21 @@ class SearchBar extends React.Component{
     render() {
         return (
             <div className="SearchBar">
-                <div className="SearchBar-sort-options">
+                <div className="SearchBar-sort-options fadeUp">
                     <ul>
                     {this.renderSortByOptions()}
                     </ul>
                 </div>
                 <div className="SearchBar-fields">
-                    <input placeholder="Search Businesses" onChange={this.handleTermChange} />
-                    <input placeholder="Where?" onChange={this.handleLocationChange} />
+                    <input className="fadeUp one" placeholder="What food? burgers, pizza, Chinese, Indian....." onChange={this.handleTermChange} />
+                    <input className="fadeUp two" placeholder="Where? Manchester, New York, Rome....." onChange={this.handleLocationChange} />
                 </div>
-                <div className="SearchBar-submit">
+                <p className="errorMessage">{this.state.searchError}</p>
+                <div className="SearchBar-submit fadeUp">
                     <a onClick={this.handleSearch} >Let's Go</a>
+                </div>
+                <div className={`arrow ${this.state.arrow}`}>
+                    <AnchorLink href="#BusinessList" className="anchor"><img src={require('../../Images/downArrow.svg')} alt=""></img></AnchorLink>
                 </div>
             </div>
         )
