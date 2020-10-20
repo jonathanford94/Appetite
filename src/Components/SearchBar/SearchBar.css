@@ -113,7 +113,7 @@
   animation-delay: 1s;
 }
 
-.SearchBar-submit a {
+.SearchBar-submit button {
   border-radius: 25px;
   padding: .72rem 1.7rem;
   background-color: #204b45;
@@ -123,7 +123,7 @@
   transition: background-color .5s;
 }
 
-.SearchBar-submit a:hover {
+.SearchBar-submit button:hover {
   cursor: pointer;
   background-color: #E95E2A;
   border: 1px solid #E95E2A;

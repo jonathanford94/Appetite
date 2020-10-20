@@ -127,7 +127,7 @@ class Business extends React.Component{
                     <p>{this.props.business.price}</p>
                     <p>{this.props.business.reviewCount} reviews</p>
                 </div>
-                <a className="webBar" target="_blank" href={this.props.business.website}><button>Website</button></a>
+                <a className="webBar" target="_blank" rel="noopener noreferrer" href={this.props.business.website}><button>Website</button></a>
             </div>
         )
     }

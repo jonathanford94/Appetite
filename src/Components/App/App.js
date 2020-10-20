@@ -26,11 +26,11 @@ class App extends React.Component{
     return (
       <div className="App">
         <div className="homePage">
-          <img className="headerImg" src={require('../../Images/backdrop1.svg')}></img>
+          <img className="headerImg" src={require('../../Images/backdrop1.svg')} alt=""></img>
           <header>
             <a className="headerTitle" href="http://localhost:3000/">
               <span className="logoWrapper fadeUp">
-                <img className="logo" src={require('../../Images/fastfood.svg')}></img>
+                <img className="logo" src={require('../../Images/fastfood.svg')} alt=""></img>
                 <h1>Appetite</h1>
               </span>
             </a>

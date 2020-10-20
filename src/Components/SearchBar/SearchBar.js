@@ -83,7 +83,7 @@ class SearchBar extends React.Component{
                 </div>
                 <p className="errorMessage">{this.state.searchError}</p>
                 <div className="SearchBar-submit fadeUp">
-                    <a onClick={this.handleSearch} >Let's Go</a>
+                    <button onClick={this.handleSearch} >Let's Go</button>
                 </div>
                 <div className={`arrow ${this.state.arrow}`}>
                     <AnchorLink href="#BusinessList" className="anchor"><img src={require('../../Images/downArrow.svg')} alt=""></img></AnchorLink>
