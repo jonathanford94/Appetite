@@ -11,4 +11,4 @@ Appetite is a React web app, that was built to use the Yelp API in order to disp
 - React
 - Yelp API
 
-🌐 <a href="">Checkout Appetite on my portfolio</a>
+🌐 <a href="https://appetite.jonathan-ford.co.uk/">Checkout Appetite on my portfolio</a>
