@@ -28,7 +28,7 @@ class App extends React.Component{
         <div className="homePage">
           <img className="headerImg" src={require('../../Images/backdrop1.svg')} alt=""></img>
           <header>
-            <a className="headerTitle" href="http://localhost:3000/">
+            <a className="headerTitle" href="https://appetite.jonathan-ford.co.uk/">
               <span className="logoWrapper fadeUp">
                 <img className="logo" src={require('../../Images/fastfood.svg')} alt=""></img>
                 <h1>Appetite</h1>
